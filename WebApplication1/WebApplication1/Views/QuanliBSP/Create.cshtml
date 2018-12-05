@@ -77,7 +77,7 @@
             <div class="col-md-10">
                 @Html.TextBox("HinhAnh", null, new { type = "file", name="filename", accept="image/gif, image/jpeg, image/png", onchange="readURL(this)", @class = "form-control" })
                 @Html.ValidationMessage("HinhAnh")
-                <img id="HinhSP" src=""/>
+                <img id="HinhSP" src="" width="400" height="300"/>
             </div>
         </div>
 
@@ -108,8 +108,8 @@
                 reader.onload = function (e) {
                     $('#HinhSP')
                         .attr('src', e.target.result)
-                        //.width(150)
-                        //.height(200);
+                        //width(150)
+                        //height(200);
                 };
                 reader.readAsDataURL(input.files[0]);
             }
